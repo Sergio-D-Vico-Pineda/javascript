@@ -1,8 +1,10 @@
-function buttonClicked() {
-    console.log("Button clicked");
+function buttonClicked(count) {
+    count += 1;
+    console.log("Button clicked: " + count);
 }
 
 function onload() {
+    let count = 0;
     console.log("DOM fully loaded and parsed");
 
     let btn = document.getElementById("btn");
