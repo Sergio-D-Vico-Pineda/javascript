@@ -1,10 +1,10 @@
-function buttonClicked(count) {
-    count += 1;
-    console.log("Button clicked: " + count);
+let count = 0;
+function buttonClicked() {
+    count++;
+    console.log("Button clicked:" + count);
 }
 
 function onload() {
-    let count = 0;
     console.log("DOM fully loaded and parsed");
 
     let btn = document.getElementById("btn");
@@ -12,7 +12,7 @@ function onload() {
     btn.onclick = buttonClicked;
 
     let btn1 = document.getElementById("btn1");
-    btn.addEventListener("click", buttonClicked);
+    btn1.addEventListener("click", buttonClicked);
 }
 
 document.addEventListener("DOMContentLoaded", onload);
