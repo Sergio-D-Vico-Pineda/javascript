@@ -20,15 +20,16 @@ function onload() {
     let Ps = document.getElementsByClassName("scarpy");
     for (const p1 of Ps) {
         console.log(p1.textContent);
-        p1.style.color = "red";
+        /* p1.style.color = "red"; */
     }
     Ps[2].classList.add("negrita");
     Ps[3].classList.remove("sergio");
 
     let btn2 = document.getElementById("btn2");
     btn2.addEventListener("click", function () {
-        Ps[0].style.color == "blue" ? Ps[0].style.color = "red" :
-            Ps[0].style.color = "blue";
+        /* Ps[0].style.color == "blue" ? Ps[0].style.color = "red" :
+            Ps[0].style.color = "blue"; */
+        Ps[0].classList.toggle("text-blue");
     });
 }
 
