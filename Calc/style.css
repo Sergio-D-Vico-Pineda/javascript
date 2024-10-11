@@ -60,7 +60,8 @@ button.operation {
     color: #ff6b6b;
 }
 
-button.equal {
+button.equal,
+button.clear {
     background-color: #ff6b6b;
     color: white;
     box-shadow: 10px 10px 20px #babecc, -10px -10px 20px #ffffff;
@@ -72,4 +73,8 @@ button:active {
 
 button.noaction {
     visibility: hidden;
+}
+
+.active {
+    background-color: #928f94;
 }
