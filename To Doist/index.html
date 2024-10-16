@@ -6,19 +6,36 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>My To Do List</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' href='../reset.css'> -->
+    <link rel='stylesheet' type='text/css' href='../reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 
 <body>
-    <!-- <template> -->
-    <form method="post">
-        <input type="text" name="todo">
-        <input type="checkbox" name="done">
-        <input type="datetime" name="date">
-        <button type="submit">Add</button>
-    </form>
-    <!-- </template> -->
+    <div class="title">
+        <h1>My To Do List</h1>
+        <button class="btnnew">New Task</button>
+        <span>By Scarpy</span>
+    </div>
+    <main>
+        <section id="to-do-list">
+            <article>
+                <h2>Task Name</h2>
+                <input type="checkbox" name="done" title="Is it done?">
+                <button>Edit ✏</button>
+                <button>Delete 🗑</button>
+            </article>
+        </section>
+    </main>
+    <template>
+        <form method="post" id="tForm">
+            <input type="datetime-local" name="date" id="date" readonly>
+            <div>
+                <input type="checkbox" name="done" title="Is it done?">
+                <input type="text" name="todo">
+            </div>
+            <button type="submit">Create new task</button>
+        </form>
+    </template>
     <script src='script.js'></script>
 </body>
 
