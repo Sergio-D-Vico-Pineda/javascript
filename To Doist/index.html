@@ -6,37 +6,41 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>My To Do List</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href='../reset.css'>
+    <!-- <link rel='stylesheet' type='text/css' href='../reset.css'> -->
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 
 <body>
     <div class="title">
-        <h1>My To Do List</h1>
-        <button class="btnnew">New Task</button>
+        <h1>To Do List</h1>
         <span>By Scarpy</span>
     </div>
     <main>
-        <section id="to-do-list">
-            <article>
-                <h2>Task Name</h2>
-                <input type="checkbox" name="done" title="Is it done?">
-                <button>Edit ✏</button>
-                <button>Delete 🗑</button>
-            </article>
+        <button id="btnnewAlert">New Task with Alert</button>
+        <section id="sectForm">
+            <button id="btnnewForm">New Task with Form</button>
+            <!-- Where the form will be -->
+        </section>
+        <section>
+            Number of tasks: <span id="taskCounter">0</span>
+        </section>
+        <h2>Tasks list</h2>
+        <section id="toDoList">
         </section>
     </main>
-    <template>
-        <form method="post" id="tForm">
-            <input type="datetime-local" name="date" id="date" readonly>
-            <div>
-                <input type="checkbox" name="done" title="Is it done?">
-                <input type="text" name="todo">
-            </div>
-            <button type="submit">Create new task</button>
-        </form>
+    <template id="taskTemplate">
+        <article id="taskExample">
+            <h3 id="titleTask"></h3>
+            <span id="dateTask"></span>
+            <input id="checkTask" type="checkbox" name="done" title="Is it done?">
+            <ul id="taskTag">
+                <li>Tag 1</li>
+            </ul>
+            <button id="btnEditTask">Edit ✏</button>
+            <button id="btnDeleteTask">Delete 🗑</button>
+        </article>
     </template>
-    <script src='script.js'></script>
+    <script src='script.js' type='module'></script>
 </body>
 
 </html>
