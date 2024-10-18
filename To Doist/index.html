@@ -6,8 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>My To Do List</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' href='../reset.css'> -->
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <!-- <link rel='stylesheet' type='text/css' href='../reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style1.css'> -->
 </head>
 
 <body>
@@ -16,10 +16,24 @@
         <span>By Scarpy</span>
     </div>
     <main>
-        <button id="btnnewAlert">New Task with Alert</button>
+        <!-- <button id="btnnewAlert">New Task with Alert</button> -->
         <section id="sectForm">
             <button id="btnnewForm">New Task with Form</button>
             <!-- Where the form will be -->
+            <form id="taskForm" method="post" style="display: none;">
+                <label>Title:
+                    <input type="text" id="title" name="title" placeholder="Title" required>
+                </label>
+                <label>Tags:
+                    <input type="text" id="tags" name="tags" placeholder="Tag, Tag 2">
+                </label>
+                Date: <input type="datetime-local" id="date" name="date" readonly>
+                <label>Done:
+                    <input type="checkbox" id="active" name="active" title="Is it done?">
+                </label>
+                <button type="submit">Create</button>
+                <button type="reset">Cancel</button>
+            </form>
         </section>
         <section>
             Number of tasks: <span id="taskCounter">0</span>
@@ -29,16 +43,28 @@
         </section>
     </main>
     <template id="taskTemplate">
-        <article id="taskExample">
+        <article>
             <h3 id="titleTask"></h3>
             <span id="dateTask"></span>
-            <input id="checkTask" type="checkbox" name="done" title="Is it done?">
-            <ul id="taskTag">
-                <li>Tag 1</li>
-            </ul>
+            <input id="checkTask" type="checkbox" name="done" title="Is it done?" disabled>
+            <ul id="taskTag"></ul>
             <button id="btnEditTask">Edit ✏</button>
             <button id="btnDeleteTask">Delete 🗑</button>
         </article>
+    </template>
+    <template id="taskEditTemplate">
+        <form id="taskEditForm" method="post">
+            <label>Title:<input type="text" id="titleEdit" name="title" placeholder="Title" required>
+            </label>
+            <label>Tags:<input type="text" id="tagsEdit" name="tags" placeholder="Tag, Tag 2">
+            </label>
+            <label>Date:<input type="datetime-local" id="dateEdit" name="date" readonly>
+            </label>
+            <label>Done:<input type="checkbox" id="activeEdit" name="active" title="Is it done?">
+            </label>
+            <button type="submit">Confirm</button>
+            <button type="reset">Cancel</button>
+        </form>
     </template>
     <script src='script.js' type='module'></script>
 </body>
