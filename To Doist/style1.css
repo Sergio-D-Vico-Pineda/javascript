@@ -63,8 +63,9 @@ main {
 }
 
 .modal {
+    z-index: 0;
     display: none;
-    place-content: center;
+    /* place-content: center; */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -74,4 +75,24 @@ main {
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.5);
+
+    >.modalContainer {
+        z-index: 1;
+        display: flex;
+        gap: 10px;
+        text-align: center;
+        flex-direction: column;
+        background-color: #2e2e2e;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+    }
+
+    button:nth-child(1) {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 15px;
+        color: black;
+    }
 }

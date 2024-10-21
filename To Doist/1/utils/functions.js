@@ -89,7 +89,6 @@ function updateCount()
 {
     const taskCounter = document.getElementById("taskCounter");
     const taskList = document.getElementById("toDoList").querySelectorAll("article");
-    console.log(taskList);
     taskCounter.textContent = taskList.length;
 }
 
