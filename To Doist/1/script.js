@@ -36,14 +36,18 @@ let modaldiv = document.querySelector(".modal");
 modaldiv.addEventListener("click", (e) =>
 {
     if (e.target == modaldiv || e.target.closest("button"))
+    {
         modal();
+        const sp = document.querySelector("#cookies");
+        sp.textContent = e.target.closest("button")?.textContent == "Decline" ? "Decline" : "Accept" + " Cookies"
+    }
 
-    const sp = document.querySelector("#cookies");
-    sp.textContent = e.target.closest("button")?.textContent == "Decline" ? "Decline" : "Accept" + " Cookies"
 })
 
 function modal()
 {
+    document.querySelector("main").classList.toggle("blur");
+    document.querySelector("header").classList.toggle("blur");
     modaldiv.style.display == "" ? modaldiv.style.display = "grid" : modaldiv.style.display = "";
 }
 
