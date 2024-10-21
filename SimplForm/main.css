@@ -1,0 +1,22 @@
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    border-right: 1px solid black;
+}
+
+#text {
+    text-align: center;
+    width: 100%;
+}
+
+.hid {
+    visibility: hidden;
+}

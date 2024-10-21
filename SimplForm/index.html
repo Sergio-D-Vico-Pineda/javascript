@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fomr</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <div id="form">
+            <label>
+                Name:
+                <input type="text" id="name" name="name">
+            </label>
+            <label>
+                Email:
+                <input type="email" id="email" name="email">
+            </label>
+            <label>
+                Newsletter
+                <input type="checkbox" name="newsletter" id="news">
+            </label>
+            <label>
+                Terms
+                <input type="checkbox" name="terms" id="terms">
+            </label>
+            <label>
+                Privacy
+                <input type="checkbox" name="privacy" id="privacy">
+            </label>
+            <button id="submit">Submit</button>
+        </div>
+        <div id="text" class="hid">
+            <p>My name is <span id="txtname"></span> and my email is <span id="txtemail"></span>.</p>
+            <p>I want to receive newsletter: <span id="txtnews"></span></p>
+            <p>I accept terms and conditions: <span id="txtterms"></span></p>
+            <p>I accept privacy policy: <span id="txtprivacy"></span></p>
+            <button id="close">Editar</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
