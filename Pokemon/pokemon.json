@@ -1,0 +1,92 @@
+{
+    "Pikachu": {
+        "HP": 35,
+        "Tipo": "Eléctrico",
+        "Nivel": 5,
+        "Ataque": "Electricidad estática"
+    },
+    "Charmander": {
+        "HP": 68,
+        "Tipo": "Fuego",
+        "Nivel": 12,
+        "Ataque": "Mar llamas"
+    },
+    "Squirtle": {
+        "HP": 45,
+        "Tipo": "Agua",
+        "Nivel": 8,
+        "Ataque": "Torrente"
+    },
+    "Bulbasaur": {
+        "HP": 57,
+        "Tipo": "Planta/Veneno",
+        "Nivel": 15,
+        "Ataque": "Espesura"
+    },
+    "Jigglypuff": {
+        "HP": 85,
+        "Tipo": "Normal/Hada",
+        "Nivel": 7,
+        "Ataque": "Flaqueza"
+    },
+    "Meowth": {
+        "HP": 40,
+        "Tipo": "Normal",
+        "Nivel": 10,
+        "Ataque": "Recogida"
+    },
+    "Psyduck": {
+        "HP": 50,
+        "Tipo": "Agua",
+        "Nivel": 20,
+        "Ataque": "Despiste"
+    },
+    "Machop": {
+        "HP": 75,
+        "Tipo": "Lucha",
+        "Nivel": 25,
+        "Ataque": "Agallas"
+    },
+    "Geodude": {
+        "HP": 60,
+        "Tipo": "Roca/Tierra",
+        "Nivel": 13,
+        "Ataque": "Robustez"
+    },
+    "Eevee": {
+        "HP": 55,
+        "Tipo": "Normal",
+        "Nivel": 9,
+        "Ataque": "Adaptable"
+    },
+    "Snorlax": {
+        "HP": 90,
+        "Tipo": "Normal",
+        "Nivel": 30,
+        "Ataque": "Inmunidad"
+    },
+    "Mankey": {
+        "HP": 40,
+        "Tipo": "Lucha",
+        "Nivel": 18,
+        "Ataque": "Espíritu vital"
+    },
+    "Abra": {
+        "HP": 25,
+        "Tipo": "Psíquico",
+        "Nivel": 5,
+        "Ataque": "Fuga"
+    },
+    "Gastly": {
+        "HP": 38,
+        "Tipo": "Fantasma/Veneno",
+        "Nivel": 22,
+        "Ataque": "Levitación"
+    },
+    "Onix": {
+        "HP": 65,
+        "Tipo": "Roca/Tierra",
+        "Nivel": 27,
+        "Ataque": "Robustez"
+    }
+}
