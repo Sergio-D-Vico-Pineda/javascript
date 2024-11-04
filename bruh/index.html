@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consola en HTML</title>
+    <style>
+        body {
+            background-color: rgb(82, 77, 77);
+            color: white;
+            text-align: center;
+        }
+
+        #consoleOutput {
+            text-align: left;
+            white-space: pre-wrap;
+            min-width: 100px;
+            width: fit-content;
+            margin-inline: auto;
+            /* Permite que las líneas se ajusten */
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            max-height: 300px;
+            overflow-y: auto;
+            color: black;
+            /* Agrega una barra de desplazamiento vertical */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Salida de la Consola</h1>
+    <pre id="consoleOutput"></pre>
+
+    <script>
+        const originalConsoleLog = console.log;
+
+        // Referencia al elemento donde mostraremos la salida de la consola
+        const consoleOutputElement = document.getElementById('consoleOutput');
+
+        // Sobreescribimos console.log
+        console.log = function (...args) {
+            // Llama al método original de console.log
+            originalConsoleLog.apply(console, args);
+
+            // Convierte los argumentos en una cadena de texto
+            const message = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)).join(' ');
+
+            // Agrega el mensaje al elemento HTML
+            consoleOutputElement.textContent += message + '\n';
+        };
+    </script>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
