@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Pokedex limitado</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body class="container">
+    <header class="controles">
+        <img src="img/splash.png" width="300" alt="Title/logo">
+        <div>
+            <label>
+                <span>Buscar un pokemon</span><br>
+                <input type="search" id="searchInput" placeholder="Filtrar por nombre" list="pkdata">
+            </label>
+            <button id="btnfilter" type="button">Filtrar</button>
+        </div>
+    </header>
+    <main>
+        <nav class="nav">
+            <h2>Lista de pokemon:</h2>
+            <ul id="pklist"></ul>
+        </nav>
+        <div>
+            <img id="pkimg" src="https://placehold.co/200" width="200" alt="pokemon image">
+            <h2 id="pkname">Nombre</h2>
+            <p>HP: <span id="pkhp">-1</span></p>
+            <meter id="pkhpbar" value="0" class="hpbar" low="0.3" high="0.7"></meter>
+            <p>Tipo: <span id="pktype">Elec</span></p>
+            <p>Nivel: <span id="pklevel">-1</span></p>
+            <p>Habilidad principal: <span id="pkattack">Rele</span></p>
+        </div>
+    </main>
+    <datalist id="pkdata">
+    </datalist>
+    <script src='main.js' type="module"></script>
+</body>
+
+</html>
