@@ -11,6 +11,7 @@ const pkhpbar = document.querySelector("#pkhpbar");
 const pktype = document.querySelector("#pktype");
 const pklevel = document.querySelector("#pklevel");
 const pkattack = document.querySelector("#pkattack");
+let pokes = Object.keys(json);
 
 pkimg.addEventListener("click", () =>
 {
@@ -26,9 +27,15 @@ searchInput.addEventListener("keypress", () =>
 })
 
 btnfilter.addEventListener("click", () =>
-{
-    console.log(searchInput.value);
-    changePk2(searchInput.value);
+{    
+    if (pokes.includes(searchInput.value))
+    {
+        changePk2(searchInput.value);
+    }
+    else
+    {
+        alert("No se encontró el Pokémon");
+    }
 })
 
 for (const pk in json)
@@ -64,6 +71,7 @@ function changePk2(name)
     pktype.innerHTML = json[pkname.innerHTML].Tipo;
     pklevel.innerHTML = json[pkname.innerHTML].Nivel;
     pkattack.innerHTML = json[pkname.innerHTML].Ataque;
+    pkimg.src = "./img/loading.gif"
     fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)
         .then((response) => response.json())
         .then((data) =>
