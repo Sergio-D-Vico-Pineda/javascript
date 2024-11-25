@@ -1,7 +1,14 @@
-'use strict';
+let post = JSON.parse(localStorage.getItem("user"));
+
+document.getElementById("userspan").textContent = post.user;
+let names = document.querySelectorAll(".username");
+names.forEach(name =>
+{
+    name.textContent = post.user;
+});
+
 
 let posts = document.querySelectorAll(".post");
-
 
 posts.forEach(epost =>
 {
@@ -16,14 +23,5 @@ posts.forEach(epost =>
         }
         localStorage.setItem("user", JSON.stringify(a));
         window.location.href = "post.html";
-    })
-
-    userspan.addEventListener("click", () =>
-    {
-        let a = {
-            user: userspan.textContent
-        }
-        localStorage.setItem("user", JSON.stringify(a));
-        window.location.href = "profile.html";
     })
 });
