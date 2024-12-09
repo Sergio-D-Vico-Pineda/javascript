@@ -13,7 +13,7 @@ defineProps({
         required: true
     },
     task: {
-        type: Boolean,
+        type: String,
         required: false
     },
     icon: {
@@ -72,7 +72,7 @@ defineProps({
     max-height: 250px;
     background-color: #eef2fb;
     border-radius: 40px;
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
 
 

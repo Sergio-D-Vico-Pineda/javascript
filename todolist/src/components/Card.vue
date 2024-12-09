@@ -9,7 +9,7 @@ defineProps({
         required: true
     },
     number: {
-        type: Number,
+        type: String,
         required: false
     },
     icon: {

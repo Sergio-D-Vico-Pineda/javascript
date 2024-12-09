@@ -4,8 +4,8 @@ import Page2 from './components/Page2.vue';
 </script>
 
 <template>
-  <!-- <Page1 /> -->
-  <Page2 />
+  <Page1 />
+  <!-- <Page2 /> -->
 </template>
 
 <style>

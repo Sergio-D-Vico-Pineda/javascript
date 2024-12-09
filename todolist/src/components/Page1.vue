@@ -1,6 +1,24 @@
-<script setup>
+<script>
 import Card from './Card.vue';
 import Slide from './Slide.vue';
+
+export default {
+    components: { Card, Slide },
+    data() {
+        return {
+            contador: 0,
+            texto: ""
+        }
+    },
+    methods: {
+        incrementar() {
+            this.contador++;
+        },
+        decrementar() {
+            this.contador--;
+        }
+    }
+}
 </script>
 
 <template>
@@ -10,9 +28,16 @@ import Slide from './Slide.vue';
                 <span class="h1">Hello Scarpy,</span>
                 <span class="subh1">You have work today</span>
             </div>
+            <div>
+                <input type="text" v-model.lazy="texto" />
+            </div>
+            <div class="text1">
+                <span>{{ texto }}</span>
+            </div>
             <div class="icons">
                 <span>🔔</span>
                 <span>♻</span>
+                <span>{{ contador }}</span>
             </div>
         </div>
     </header>
@@ -29,11 +54,11 @@ import Slide from './Slide.vue';
                 <Slide day="Today" time="4:50 PM" text="Project retrospective" />
                 <Slide day="Today" time="4:50 PM" text="Evening team meeting" />
                 <Slide day="Today" text="Create monthly deck" />
-                <Slide day="Today" time="6:00 PM" text="Shop for groceries" task="true" />
+                <Slide day="Today" time="6:00 PM" text="Shop for groceries" task=true />
                 <Slide day="Yesterday" time="10:30 PM" text="Read book" />
             </div>
         </div>
-        <div class="fab">
+        <div @click="incrementar()" @contextmenu="decrementar()" class="fab">
             +
         </div>
     </main>
@@ -74,6 +99,18 @@ import Slide from './Slide.vue';
     .subh1 {
         opacity: 0.5;
     }
+
+    .text1 {
+        max-width: 200px;
+        overflow: auto hidden;
+        border: 1px solid black;
+        width: fit-content;
+
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
 .main {
@@ -108,6 +145,7 @@ import Slide from './Slide.vue';
     }
 
     .fab {
+        cursor: pointer;
         position: fixed;
         bottom: 80px;
         right: 30px;
@@ -120,6 +158,12 @@ import Slide from './Slide.vue';
         font-size: 3rem;
         font-weight: bold;
         color: white;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            scale: 1.1;
+            background-color: #1a56b3;
+        }
     }
 }
 </style>
