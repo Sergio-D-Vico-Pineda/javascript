@@ -1,6 +1,6 @@
 <script setup>
 import Page1 from './components/Page1.vue';
-import Page2 from './components/Page2.vue';
+/* import Page2 from './components/Page2.vue'; */
 </script>
 
 <template>

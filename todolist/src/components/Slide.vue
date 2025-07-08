@@ -74,8 +74,6 @@ defineProps({
     border-radius: 40px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
-
-
     .bgicon {
         align-self: self-start;
         width: 50px;
